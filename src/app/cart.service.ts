@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({providedIn: 'root'})
 export class CartService {
@@ -21,6 +22,6 @@ export class CartService {
     return this.items;
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 }
