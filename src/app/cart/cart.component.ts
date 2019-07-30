@@ -18,6 +18,12 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService, private formBuilder: FormBuilder) { 
     //displays the cart items for this instance/iteration of the cart
     this.items = this.cartService.getItems();
+
+    //set the form property so that you can pull data from it later (uses FormBuilder group method):
+    this.checkoutForm = this.formBuilder.group({
+      name: '',
+      address: ''
+    });
   }
 
   ngOnInit() {
