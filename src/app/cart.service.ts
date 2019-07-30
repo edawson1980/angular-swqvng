@@ -22,6 +22,11 @@ export class CartService {
     return this.items;
   }
 
+  //retrieve shipping data:
+  getShippingPrices(){
+    return this.http.get('/assets/shipping.json');
+  }
+
   constructor(private http: HttpClient) { }
 
 }
