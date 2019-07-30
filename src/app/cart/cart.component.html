@@ -11,6 +11,6 @@
 
 <!-- formGroup property binds checkoutForm to this tag: -->
 
-<form [formGroup]="checkoutForm">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
   <button class="button" type="submit">Purchase</button>
 </form>
