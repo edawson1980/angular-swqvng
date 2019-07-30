@@ -8,3 +8,9 @@
   <span>{{item.name}}</span>
   <span>{{item.price | currency}}</span>
 </div>
+
+<!-- formGroup property binds checkoutForm to this tag: -->
+
+<form [formGroup]="checkoutForm">
+  <button class="button" type="submit">Purchase</button>
+</form>
