@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
   //define this property to store the Form model:
   checkoutForm;
 
+
   constructor(private cartService: CartService, private formBuilder: FormBuilder) { 
     //displays the cart items for this instance/iteration of the cart
     this.items = this.cartService.getItems();
@@ -25,6 +26,15 @@ export class CartComponent implements OnInit {
       address: ''
     });
   }
+
+   //method to process form:
+  onSubmit(customerData){
+    //process order here
+    console.warn('Your order has been submitted', customerData);
+
+    this.items = this.cartService.clearCart();
+    this.checkoutForm.reset();
+  };
 
   ngOnInit() {
   }
