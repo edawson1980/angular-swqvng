@@ -12,7 +12,7 @@ import {CartService} from '../cart.service';
 export class ProductDetailsComponent implements OnInit {
   product;
 
-  constructor(private route: ActivatedRoute,) { }
+  constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
   //subscribe to route params (which correspond to the path variables defined in the route)
   ngOnInit() {
