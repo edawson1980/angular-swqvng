@@ -12,6 +12,8 @@ import {CartService} from '../cart.service';
 export class CartComponent implements OnInit {
   //defines the property that stores items in the cart:
   items;
+  //define this property to store the Form model:
+  checkoutForm;
 
   constructor(private cartService: CartService, private formBuilder: FormBuilder) { 
     //displays the cart items for this instance/iteration of the cart
