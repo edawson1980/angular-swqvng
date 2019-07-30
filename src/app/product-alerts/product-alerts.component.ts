@@ -7,6 +7,7 @@ import { Input } from '@angular/core';
   styleUrls: ['./product-alerts.component.css']
 })
 export class ProductAlertsComponent implements OnInit {
+  // @Input - property's value will be passed in from component's parent (product list)
   @Input() product;
   constructor() { }
 
